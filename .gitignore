@@ -1,0 +1,5 @@
+# Ignore build directory
+/_build/
+
+# Ignore vscode hidden directory
+/.vscode/
