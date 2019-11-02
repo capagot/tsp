@@ -10,6 +10,7 @@
 #include "tsp_solver.h"
 #include "tsp_brute_force.h"
 #include "tsp_nearest_neighbor.h"
+#include "tsp_bellmore_nemhauser.h"
 
 class Application {
    public:

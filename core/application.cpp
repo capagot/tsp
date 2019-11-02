@@ -17,6 +17,8 @@ Application::Application(int argc, char** argv) {
         tsp_solver_ = std::make_unique<TSPBruteForce>(tsplib_data_, tsp_solution_);
     else if (tsp_solver_type.compare("nearest-neighbor") == 0)
         tsp_solver_ = std::make_unique<TSPNearestNeighbor>(tsplib_data_, tsp_solution_);
+    else if (tsp_solver_type.compare("bellmore-nemhauser") == 0)
+        tsp_solver_ = std::make_unique<TSPBellmoreNemhauser>(tsplib_data_, tsp_solution_);
     else
         throw;
 }

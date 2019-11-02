@@ -1,4 +1,4 @@
-NAME: weights_11_nodes.tsp
+NAME: weight_matrix_11_nodes.tsp
 TYPE: TSP
 COMMENT: Obtained from an StackOverflow question.
 DIMENSION: 11 

@@ -14,9 +14,6 @@ class TSPNearestNeighbor : public TSPSolver {
     TSPNearestNeighbor(tlb::TSPLibData& tsplib_data, TSPSolution& tsp_solution);
     ~TSPNearestNeighbor();
     void solve() override;
-
-   private:
-    std::list<int> nodes_;
 };
 
 #endif  // TSP_NEAREST_NEIGHBOR_H

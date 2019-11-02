@@ -6,7 +6,7 @@
 
 class TSPSolver {
    public:
-    enum class TSPSolverType { BRUTE_FORCE, NEAREST_NEIGHBOR };
+    enum class TSPSolverType { BRUTE_FORCE, NEAREST_NEIGHBOR, BELLMORE_NEMHAUSER };
 
     TSPSolver(tlb::TSPLibData& tsplib_data, TSPSolution& tsp_solution, TSPSolverType tsp_solver_type);
     virtual void solve() = 0;
