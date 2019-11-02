@@ -9,6 +9,7 @@
 #include "tsp_solution.h"
 #include "tsp_solver.h"
 #include "tsp_brute_force.h"
+#include "tsp_nearest_neighbor.h"
 
 class Application {
    public:

@@ -1,5 +1,6 @@
-# Ignore build directory
+# Ignore build directories
 /_build/
+/third_party/ann_1.1.2/_build/
 
 # Ignore vscode hidden directory
 /.vscode/

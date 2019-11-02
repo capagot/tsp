@@ -12,6 +12,8 @@ TSPBruteForce::~TSPBruteForce() {}
 void TSPBruteForce::solve() {
     std::cout << "Brute force TSP solver.\n";
     std::cout << "# permutations: " << factorial(nodes_.size()) << "\n";
+    tsp_solution_.cost = std::numeric_limits<float>::infinity();
+
     pathPermutation(0);
 }
 
@@ -34,7 +36,10 @@ void TSPBruteForce::pathPermutation(int i) {
         if (cost < tsp_solution_.cost) {
             tsp_solution_.cost = cost;
 
-            for (int k = 0; k < n; ++k) tsp_solution_.nodes[k] = nodes_[k];
+            for (int k = 0; k < n; ++k) 
+                tsp_solution_.nodes[k] = nodes_[k];
+
+            tsp_solution_.nodes[tsp_solution_.nodes.size() - 1] = nodes_[0];
         }
     } else {
         for (int j = i; j < n; ++j) {

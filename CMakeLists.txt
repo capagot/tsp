@@ -29,8 +29,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)       # sets -std=c++17 instead of -std=g++17
 ###############################################################################
 
 add_executable(tsp
-               ${PROJECT_SOURCE_DIR}/main.cpp
-               ${PROJECT_SOURCE_DIR}/application.cpp
-               ${PROJECT_SOURCE_DIR}/tsplib_reader.cpp
-               ${PROJECT_SOURCE_DIR}/tsp_solver.cpp
-               ${PROJECT_SOURCE_DIR}/tsp_brute_force.cpp)
+               ${PROJECT_SOURCE_DIR}/core/main.cpp
+               ${PROJECT_SOURCE_DIR}/core/application.cpp
+               ${PROJECT_SOURCE_DIR}/tsplib_reader/tsplib_reader.cpp
+               ${PROJECT_SOURCE_DIR}/solvers/tsp_solver.cpp
+               ${PROJECT_SOURCE_DIR}/solvers/tsp_brute_force.cpp
+               ${PROJECT_SOURCE_DIR}/solvers/tsp_nearest_neighbor.cpp)
+
+target_include_directories(tsp
+                           PRIVATE
+                           ${PROJECT_SOURCE_DIR}/tsplib_reader
+                           ${PROJECT_SOURCE_DIR}/solvers
+                           ${PROJECT_SOURCE_DIR}/third_party/ann_1.1.2/include/ANN)

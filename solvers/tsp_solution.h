@@ -5,8 +5,6 @@
 #include <vector>
 
 struct TSPSolution {
-    TSPSolution() : cost(std::numeric_limits<float>::infinity()) {}
-
     float cost;
     std::vector<int> nodes;
 };
