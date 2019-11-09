@@ -34,6 +34,7 @@ add_executable(tsp
                ${PROJECT_SOURCE_DIR}/tsplib_reader/tsplib_reader.cpp
                ${PROJECT_SOURCE_DIR}/solvers/tsp_solver.cpp
                ${PROJECT_SOURCE_DIR}/solvers/tsp_brute_force.cpp
+               ${PROJECT_SOURCE_DIR}/solvers/tsp_dynamic_programming.cpp
                ${PROJECT_SOURCE_DIR}/solvers/tsp_nearest_neighbor.cpp
                ${PROJECT_SOURCE_DIR}/solvers/tsp_bellmore_nemhauser.cpp)
 

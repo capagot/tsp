@@ -5,6 +5,14 @@
 #include <string>
 
 struct CmdLineOptions {
+    static bool getOptionValue(int argc, char** argv, const std::string& short_option) {
+        bool option_exists = false;
+        for (int i = 1; i < argc; ++i)
+            if (short_option.compare(*(argv + i)) == 0)
+                option_exists = true;
+
+        return option_exists;    }
+
     static bool getOptionValue(int argc, char** argv, const std::string& short_option, int& value) {
         bool option_exists = false;
 
@@ -25,7 +33,7 @@ struct CmdLineOptions {
                 value = std::string(*(argv + i + 1));
                 option_exists = true;
             }
-            
+
         return option_exists;
     }
 };

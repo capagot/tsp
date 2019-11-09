@@ -9,6 +9,7 @@
 #include "tsp_solution.h"
 #include "tsp_solver.h"
 #include "tsp_brute_force.h"
+#include "tsp_dynamic_programming.h"
 #include "tsp_nearest_neighbor.h"
 #include "tsp_bellmore_nemhauser.h"
 
@@ -18,6 +19,8 @@ class Application {
     void run();
 
    private:
+    void printHelpMessage() const;
+
     TSPSolution tsp_solution_;
     tlb::TSPLibData tsplib_data_;
     std::unique_ptr<TSPSolver> tsp_solver_;
