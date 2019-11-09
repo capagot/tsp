@@ -3,6 +3,9 @@ Implementation of some TSP solvers.
 
 In the current state, the application supports only symmetric problems, and the following solvers: 
 
-* Brute force (naïve).
-* Nearest neighbor.
-* Bellmore-Nemhauser.
+* Exact
+  * Brute force (naïve).
+  * Dynamic programming (based on the Bellman-Held-Karp algorithm).
+* Heuristic
+  * Nearest neighbor.
+  * Bellmore-Nemhauser.
