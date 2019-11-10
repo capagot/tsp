@@ -11,6 +11,7 @@
 #include "tsp_brute_force.h"
 #include "tsp_dynamic_programming.h"
 #include "tsp_nearest_neighbor.h"
+#include "tsp_nearest_insertion.h"
 #include "tsp_bellmore_nemhauser.h"
 
 class Application {

@@ -22,6 +22,8 @@ Application::Application(int argc, char** argv) {
         tsp_solver_ = std::make_unique<TSPDynamicProgramming>(tsplib_data_, tsp_solution_);
     else if (tsp_solver_type.compare("nearest-neighbor") == 0)
         tsp_solver_ = std::make_unique<TSPNearestNeighbor>(tsplib_data_, tsp_solution_);
+    else if (tsp_solver_type.compare("nearest-insertion") == 0)
+        tsp_solver_ = std::make_unique<TSPNearestInsertion>(tsplib_data_, tsp_solution_);
     else if (tsp_solver_type.compare("bellmore-nemhauser") == 0)
         tsp_solver_ = std::make_unique<TSPBellmoreNemhauser>(tsplib_data_, tsp_solution_);
     else
@@ -47,5 +49,6 @@ void Application::printHelpMessage() const {
     std::cout << "  brute-force\n";
     std::cout << "  dynamic-programming\n";
     std::cout << "  nearest-neighbor\n";
+    std::cout << "  nearest-insertion\n";
     std::cout << "  bellmore-nemhauser\n";
 }

@@ -7,6 +7,13 @@ TSPDynamicProgramming::TSPDynamicProgramming(tlb::TSPLibData& tsplib_data, TSPSo
 
 TSPDynamicProgramming::~TSPDynamicProgramming() {}
 
+/* 
+ * The dynamic programming based algorithm implemented below was extracted from
+ * the draft of the Chapter 7 of the book "A Practical Guide to Discrete Optimization", by
+ * D. Applegate, W. Cook, S. Dash and D. Johnson. 
+ * The Chapter 7 is available at:
+ *     http://www.math.uwaterloo.ca/~bico/papers/comp_chapterDP.pdf
+ */
 void TSPDynamicProgramming::solve() {
     std::cout << "Dynamic programming TSP solver.\n";
 
